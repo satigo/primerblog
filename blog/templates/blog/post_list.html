@@ -2,12 +2,16 @@
 
 {% block content %}
     {% for publicacion in publicaciones %}
-        <div class="post">
-            <div class="date">
-                {{ publicacion.fecha_publicacion }}
-            </div>
-            <h2><a href="{% url 'post_detail' pk=publicacion.pk %}">{{ publicacion.titulo }}</a></h2>
-            <p>{{ publicacion.texto|linebreaksbr }}</p>
-        </div>
+    
+<div class="col-lg-12">
+<a href="{% url 'post_detail' pk=publicacion.pk %}">   <h2>{{publicacion.titulo}}</h2> </a>
+    <blackquote class="blackquote">
+      <p class="mb-o">{{publicacion.texto|linebreaksbr}}</p>
+      <footer class="blockquote-footer">{{publicacion.fecha_publicacion}} </footer>
+      </blackquote>
+    </div>
+  
+   
+
     {% endfor %}
-{% endblock %}
+    {% endblock %}
