@@ -19,21 +19,21 @@
                 </li>
                 
               </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-              </form>
-            </div>
+              <a href="{% url 'publicacion_nueva' %}">
+                  <button class="btn btn-secondary my-2 my-sm-0" type="button">Nueva Publicacion</button>
+                </a>
+              </div>
           </nav>
     </head>
     <body>
             <div class="page-header">
-                
+              
             </div>
             <div class="content container">
                 <div class="row">
                     <div class="col-md-8">
                     {% block content %}
+                    
                     {% endblock %}
                     </div>
                 </div>

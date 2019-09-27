@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+   
+    <form method="POST" class="post-form">{% csrf_token %}
+        <fieldset>
+            <legend>Ingreso de Nuevo Publicacion</legend>
+        <div class="form-group">
+       
+            {{ form.as_p }}
+
+    </div>
+</fieldset>
+
+        <button type="submit" class="btn btn-success">Guardar</button>
+    </form>
+{% endblock %}
+
