@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for publicacion in publicaciones %}
+    <div class="col-lg-12">        
+            <footer class="blockquote-footer">Publicacion creada: {{publicacion.fecha_creacion|date:'d-m-Y' }} </footer>
+            <h1><a href="{% url 'post_detail' pk=publicacion.pk %}">{{ publicacion.titulo }}</a></h1>
+            <p>{{ publicacion.texto|truncatechars:200 }}</p>        
+            <a class="btn btn-danger" href="{% url 'post_remove' pk=publicacion.pk %}">Eliminar </a>
+
+    </div>
+    {% endfor %}
+{% endblock %}

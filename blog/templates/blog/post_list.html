@@ -9,6 +9,9 @@
       <p class="mb-o">{{publicacion.texto|linebreaksbr}}</p>
       <footer class="blockquote-footer">{{publicacion.fecha_publicacion}} </footer>
       </blackquote>
+      <a class="btn btn-primary" href="{% url 'publicacion_editar' pk=publicacion.pk %}">Editar</a>
+      <a class="btn btn-danger" href="{% url 'post_remove' pk=publicacion.pk %}">Eliminar </a>
+
     </div>
   
    
